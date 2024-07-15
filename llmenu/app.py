@@ -7,9 +7,9 @@ import streamlit as st
 load_dotenv(".env")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-with open('llmenu/system_instruction.txt', "r") as file:
+with open('llmenu/system_instruction_competition.txt', "r") as file:
     file_content = file.read()
-model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=file_content)
+model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=file_content)
 
 st.title("Chat")
 
